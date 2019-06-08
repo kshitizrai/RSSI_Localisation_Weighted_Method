@@ -51,6 +51,8 @@ public class TAG_File {
    {
      int RSSI_ref = (connected.get(i)).RSSIRequest();
      float weight = 2-float(max-RSSI_ref)/(max-RSSI_threshold);
+     if(RSSI_ref < RSSI_threshold)
+       weight = 0;
      (connected.get(i)).weight = weight;
    }
    int weight_sum = 0;

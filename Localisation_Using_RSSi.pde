@@ -21,7 +21,7 @@ ArrayList<TAG_File> Tags_Data  = new ArrayList<TAG_File>();
 
 String COM_PORT = "/dev/ttyUSB0";
 
-int RSSI_threshold = -90; // At the max radius
+int RSSI_threshold = -110; // At the max radius
 
 byte[] header = new byte[50];
 int byte_received = 0;
@@ -198,7 +198,7 @@ void serial2Event(Serial port)
         }
       }
       if (index_tag != -1) 
-      (Tags_Data.get(index_tag)).print();
+       (Tags_Data.get(index_tag)).print();
     }
   }
 }
